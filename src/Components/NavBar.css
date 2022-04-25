@@ -1,0 +1,143 @@
+
+
+.navBar {
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2rem;
+    top: 0;
+    z-index: 999;
+}
+
+.navLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 8px;
+}
+.navLogo img{
+    border-radius: 80px;
+    border: 2px solid;
+}
+
+.navLogo h1 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif ;
+    margin-left: 5px;
+}
+
+
+.navBarContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    max-width: 1500px;
+}
+
+.navLink {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 20px;
+}
+
+#login{
+    border: 1px solid white;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.navLink:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.navItem{
+    display: flex;
+    list-style: none
+}
+
+
+
+.navLinkMobile {
+    display: none;
+}
+
+.menuIcon {
+    display: none;
+    color: #fff;
+}
+
+@media  screen and (max-width: 960px) {
+    .NavbarItems {
+        position: relative;
+    }
+
+#login{
+    margin-left: 0px;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 90px;
+    margin-top: 20px;
+    border-radius: 4px;
+
+
+}
+
+    .navLink {
+        color: #fff;
+        height: 80px;
+        cursor: pointer;
+    }
+
+
+    .navItem{
+        flex-direction: column;
+        /* display: none; */
+    }
+
+    .navMenu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 90vh;
+        position: absolute;
+        top: 80px;
+        opacity: 1;
+        transition: all 0.5 ease;
+    }
+
+    .navMenu.active {
+        display: flex;
+        background-color: #242222;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5 ease;
+        z-index: 1;
+    }
+
+    .menuIcon{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+}
+
